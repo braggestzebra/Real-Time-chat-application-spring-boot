@@ -1,7 +1,7 @@
 package Chat.Application.Chat.app.Controller;
 
 import Chat.Application.Chat.app.model.ChatMessage;
-import Chat.Application.Chat.app.model.PrivateMessage;
+import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessageSendingOperations;
@@ -36,5 +36,10 @@ public class ChatController {
     @GetMapping("/chat")
     public String Chat(){
         return "chat";
+    }
+
+    @GetMapping("/history")
+    public ResponseEntity<String> getChatHistory() {
+        return ResponseEntity.ok("Your chat history");
     }
 }
