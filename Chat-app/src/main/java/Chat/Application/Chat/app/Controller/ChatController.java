@@ -33,7 +33,7 @@ public class ChatController {
 //        );
 //    }
 
-    @GetMapping(value = "/chat")
+    @GetMapping("/chat")
     public String Chat(){
         return "chat";
     }
