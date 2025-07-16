@@ -35,6 +35,7 @@ public class ChatController {
 
     @GetMapping("/chat")
     public String Chat(){
+        // dev 2 faature changes
         return "chat";
     }
 
