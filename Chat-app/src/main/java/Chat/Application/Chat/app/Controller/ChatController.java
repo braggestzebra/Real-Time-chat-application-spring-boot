@@ -24,6 +24,7 @@ public class ChatController {
     @MessageMapping("/sendMessage")
     @SendTo("/topic/messages")
     public ChatMessage sendMessage(ChatMessage message){
+        // test dev 2 commit
         return message;
     }
 
@@ -39,6 +40,7 @@ public class ChatController {
 
     @GetMapping("/chat")
     public String Chat(){
+        // dev 2 faature changes
         return "chat";
     }
 
