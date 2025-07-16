@@ -25,6 +25,7 @@ public class ChatController {
     @SendTo("/topic/messages")
     public ChatMessage sendMessage(ChatMessage message){
         // test dev 2 commit
+        //new change
         return message;
     }
 
