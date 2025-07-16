@@ -11,7 +11,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ChatController {
 
-//    private final SimpMessageSendingOperations messagingTemplate;
+    private final SimpMessageSendingOperations messagingTemplate;
+
+    public ChatController(SimpMessageSendingOperations messagingTemplate) {
+        this.messagingTemplate = messagingTemplate;
+    }
 //
 //    public ChatController(SimpMessageSendingOperations messagingTemplate) {
 //        this.messagingTemplate = messagingTemplate;
