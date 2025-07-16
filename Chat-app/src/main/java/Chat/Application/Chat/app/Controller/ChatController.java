@@ -26,6 +26,9 @@ public class ChatController {
     public ChatMessage sendMessage(ChatMessage message){
         // test dev 2 commit
         //new change
+        // dev 1 change
+        System.out.println("here is dev1 change");
+        System.out.println("This is test merge conflict");
         return message;
     }
 
@@ -47,6 +50,7 @@ public class ChatController {
 
     @GetMapping("/history")
     public ResponseEntity<String> getChatHistory() {
+        System.out.println("No merge conflict changes");
         return ResponseEntity.ok("Your chat history");
     }
 }
