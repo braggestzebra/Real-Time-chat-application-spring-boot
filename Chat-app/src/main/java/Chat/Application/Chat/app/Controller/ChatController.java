@@ -11,15 +11,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ChatController {
 
-    private final SimpMessageSendingOperations messagingTemplate;
+    private final SimpMessageSendingOperations messagingTemplate123;
 
-    public ChatController(SimpMessageSendingOperations messagingTemplate) {
-        this.messagingTemplate = messagingTemplate;
+    public ChatController(SimpMessageSendingOperations messagingTemplate123) {
+        this.messagingTemplate123 = messagingTemplate123;
     }
-//
-//    public ChatController(SimpMessageSendingOperations messagingTemplate) {
-//        this.messagingTemplate = messagingTemplate;
-//    }
 
     @MessageMapping("/sendMessage")
     @SendTo("/topic/messages")
@@ -29,6 +25,9 @@ public class ChatController {
         // dev 1 change
         System.out.println("here is dev1 change");
         System.out.println("This is test merge conflict");
+        // dev 2 change
+        System.out.println("this is dev2 change");
+        System.out.println("dev 2 merge conflict demo");
         return message;
     }
 
@@ -45,6 +44,7 @@ public class ChatController {
     @GetMapping("/chat")
     public String Chat(){
         // dev 2 faature changes
+        System.out.println("hello user");
         return "chat";
     }
 
