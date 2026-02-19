@@ -16,7 +16,7 @@ public class WebSocketConfig  implements WebSocketMessageBrokerConfigurer {
                .setAllowedOrigins("http://localhost:8080")
                .withSockJS();
     }
-
+// testing to change the branch name
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
         //set message broker
